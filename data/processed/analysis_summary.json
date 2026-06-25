@@ -1,457 +1,333 @@
 {
-  "analysis_date": "2026-06-01",
+  "source": "Telco Customer Churn",
+  "rows": 7043,
   "kpis": {
-    "customers": 1400,
-    "active_customers": 1149,
-    "logo_churn_rate": 0.1792857142857143,
-    "active_mrr": 118055.15000000008,
-    "lost_mrr": 15435.500000000011,
-    "revenue_churn_rate": 0.1156298212646354,
-    "avg_tenure_months": 9.329285714285714,
-    "avg_active_usage_days": 3.595126196692775,
-    "onboarding_churn_delta": 0.2188813025210084,
-    "usage_churn_delta": 0.2729044834307992
+    "customers": 7043,
+    "active_customers": 5174,
+    "churned_customers": 1869,
+    "logo_churn_rate": 0.2653698707936959,
+    "monthly_revenue": 456116.6000000003,
+    "lost_monthly_revenue": 139130.84999999986,
+    "revenue_churn_rate": 0.3050335155528208,
+    "avg_tenure": 32.37114865824223,
+    "avg_monthly_charges": 64.76169246059922,
+    "month_to_month_churn": 0.4270967741935484,
+    "two_year_churn": 0.02831858407079646
   },
   "segments": {
-    "plan": [
+    "contract": [
       {
-        "segment": "Starter",
-        "customers": 557,
-        "churn_rate": 0.2513464991023339,
-        "avg_tenure": 8.904847396768401,
-        "active_mrr": 11809.73,
-        "lost_mrr": 4018.769999999999,
-        "avg_usage": 3.0199281867145427,
-        "onboarding_rate": 0.6122082585278277
+        "segment": "Month-to-month",
+        "customers": 3875,
+        "churned": 1655,
+        "churn_rate": 0.4270967741935484,
+        "avg_tenure": 18.036645161290323,
+        "avg_monthly_charges": 66.39849032258037,
+        "lost_monthly_revenue": 120847.09999999998
       },
       {
-        "segment": "Growth",
-        "customers": 468,
-        "churn_rate": 0.1794871794871795,
-        "avg_tenure": 9.564102564102564,
-        "active_mrr": 29411.67999999999,
-        "lost_mrr": 6541.470000000002,
-        "avg_usage": 3.2771367521367507,
-        "onboarding_rate": 0.6752136752136753
+        "segment": "One year",
+        "customers": 1473,
+        "churned": 166,
+        "churn_rate": 0.11269517990495587,
+        "avg_tenure": 42.044806517311606,
+        "avg_monthly_charges": 65.04860828241674,
+        "lost_monthly_revenue": 14118.45
       },
       {
-        "segment": "Business",
-        "customers": 261,
-        "churn_rate": 0.08812260536398467,
-        "avg_tenure": 9.32183908045977,
-        "active_mrr": 34424.44999999999,
-        "lost_mrr": 3395.3,
-        "avg_usage": 3.8789272030651345,
-        "onboarding_rate": 0.7509578544061303
-      },
-      {
-        "segment": "Enterprise",
-        "customers": 114,
-        "churn_rate": 0.03508771929824561,
-        "avg_tenure": 10.456140350877194,
-        "active_mrr": 42409.29,
-        "lost_mrr": 1479.9599999999998,
-        "avg_usage": 4.886842105263156,
-        "onboarding_rate": 0.868421052631579
+        "segment": "Two year",
+        "customers": 1695,
+        "churned": 48,
+        "churn_rate": 0.02831858407079646,
+        "avg_tenure": 56.73510324483776,
+        "avg_monthly_charges": 60.770412979351,
+        "lost_monthly_revenue": 4165.299999999999
       }
     ],
-    "region": [
+    "internet_service": [
       {
-        "segment": "MEA",
-        "customers": 80,
-        "churn_rate": 0.2625,
-        "avg_tenure": 9.1375,
-        "active_mrr": 6145.67,
-        "lost_mrr": 1030.8999999999999,
-        "avg_usage": 3.089999999999999,
-        "onboarding_rate": 0.675
+        "segment": "Fiber optic",
+        "customers": 3096,
+        "churned": 1297,
+        "churn_rate": 0.4189276485788114,
+        "avg_tenure": 32.91795865633075,
+        "avg_monthly_charges": 91.50012919896615,
+        "lost_monthly_revenue": 114300.04999999997
       },
       {
-        "segment": "North America",
-        "customers": 499,
-        "churn_rate": 0.1963927855711423,
-        "avg_tenure": 9.350701402805612,
-        "active_mrr": 41040.57000000003,
-        "lost_mrr": 6026.519999999999,
-        "avg_usage": 3.462324649298596,
-        "onboarding_rate": 0.6513026052104208
+        "segment": "DSL",
+        "customers": 2421,
+        "churned": 459,
+        "churn_rate": 0.1895910780669145,
+        "avg_tenure": 32.82156133828996,
+        "avg_monthly_charges": 58.10216852540261,
+        "lost_monthly_revenue": 22529.20000000002
       },
       {
-        "segment": "APAC",
-        "customers": 326,
-        "churn_rate": 0.1687116564417178,
-        "avg_tenure": 9.35276073619632,
-        "active_mrr": 26810.289999999986,
-        "lost_mrr": 2903.9399999999996,
-        "avg_usage": 3.3503067484662576,
-        "onboarding_rate": 0.6840490797546013
-      },
-      {
-        "segment": "Europe",
-        "customers": 374,
-        "churn_rate": 0.16844919786096257,
-        "avg_tenure": 9.318181818181818,
-        "active_mrr": 32788.099999999984,
-        "lost_mrr": 4603.81,
-        "avg_usage": 3.418181818181817,
-        "onboarding_rate": 0.6951871657754011
-      },
-      {
-        "segment": "LATAM",
-        "customers": 121,
-        "churn_rate": 0.11570247933884298,
-        "avg_tenure": 9.338842975206612,
-        "active_mrr": 11270.519999999997,
-        "lost_mrr": 870.3299999999999,
-        "avg_usage": 3.6347107438016515,
-        "onboarding_rate": 0.743801652892562
+        "segment": "No",
+        "customers": 1526,
+        "churned": 113,
+        "churn_rate": 0.07404980340760157,
+        "avg_tenure": 30.54718217562254,
+        "avg_monthly_charges": 21.079193971166454,
+        "lost_monthly_revenue": 2301.6
       }
     ],
-    "channel": [
+    "payment_method": [
       {
-        "segment": "Paid Search",
-        "customers": 323,
-        "churn_rate": 0.19195046439628483,
-        "avg_tenure": 9.303405572755418,
-        "active_mrr": 27961.919999999976,
-        "lost_mrr": 4114.659999999998,
-        "avg_usage": 3.4034055727554184,
-        "onboarding_rate": 0.6470588235294118
+        "segment": "Electronic check",
+        "customers": 2365,
+        "churned": 1071,
+        "churn_rate": 0.4528541226215645,
+        "avg_tenure": 25.17463002114165,
+        "avg_monthly_charges": 76.25581395348838,
+        "lost_monthly_revenue": 84288.75000000007
       },
       {
-        "segment": "Organic",
-        "customers": 440,
-        "churn_rate": 0.18863636363636363,
-        "avg_tenure": 9.26590909090909,
-        "active_mrr": 38729.97999999998,
-        "lost_mrr": 5319.47,
-        "avg_usage": 3.381590909090909,
-        "onboarding_rate": 0.6727272727272727
+        "segment": "Mailed check",
+        "customers": 1612,
+        "churned": 308,
+        "churn_rate": 0.19106699751861042,
+        "avg_tenure": 21.830024813895783,
+        "avg_monthly_charges": 43.917059553349915,
+        "lost_monthly_revenue": 16803.600000000002
       },
       {
-        "segment": "Referral",
-        "customers": 263,
-        "churn_rate": 0.17490494296577946,
-        "avg_tenure": 9.372623574144487,
-        "active_mrr": 19619.230000000003,
-        "lost_mrr": 2466.2999999999997,
-        "avg_usage": 3.407604562737642,
-        "onboarding_rate": 0.7034220532319392
+        "segment": "Bank transfer (automatic)",
+        "customers": 1544,
+        "churned": 258,
+        "churn_rate": 0.16709844559585493,
+        "avg_tenure": 43.65673575129534,
+        "avg_monthly_charges": 67.1926489637305,
+        "lost_monthly_revenue": 20091.900000000012
       },
       {
-        "segment": "Content",
-        "customers": 132,
-        "churn_rate": 0.17424242424242425,
-        "avg_tenure": 8.969696969696969,
-        "active_mrr": 11755.61,
-        "lost_mrr": 1519.35,
-        "avg_usage": 3.574242424242425,
-        "onboarding_rate": 0.7121212121212122
+        "segment": "Credit card (automatic)",
+        "customers": 1522,
+        "churned": 232,
+        "churn_rate": 0.15243101182654403,
+        "avg_tenure": 43.269382391590014,
+        "avg_monthly_charges": 66.51238501971082,
+        "lost_monthly_revenue": 17946.600000000006
+      }
+    ],
+    "tenure": [
+      {
+        "segment": "0-6 months",
+        "customers": 1481,
+        "churned": 784,
+        "churn_rate": 0.5293720459149224,
+        "avg_tenure": 2.5104659014179607,
+        "avg_monthly_charges": 54.738656313301725,
+        "lost_monthly_revenue": 49896.09999999998
       },
       {
-        "segment": "Partner",
-        "customers": 242,
-        "churn_rate": 0.15289256198347106,
-        "avg_tenure": 9.62809917355372,
-        "active_mrr": 19988.41,
-        "lost_mrr": 2015.7199999999998,
-        "avg_usage": 3.4301652892561996,
-        "onboarding_rate": 0.6942148760330579
+        "segment": "7-12 months",
+        "customers": 705,
+        "churned": 253,
+        "churn_rate": 0.3588652482269504,
+        "avg_tenure": 9.397163120567376,
+        "avg_monthly_charges": 58.95290780141848,
+        "lost_monthly_revenue": 19058.149999999998
+      },
+      {
+        "segment": "13-24 months",
+        "customers": 1024,
+        "churned": 294,
+        "churn_rate": 0.287109375,
+        "avg_tenure": 18.3515625,
+        "avg_monthly_charges": 61.35727539062508,
+        "lost_monthly_revenue": 23081.65
+      },
+      {
+        "segment": "25-48 months",
+        "customers": 1594,
+        "churned": 325,
+        "churn_rate": 0.2038895859473024,
+        "avg_tenure": 36.19134253450439,
+        "avg_monthly_charges": 65.93055207026349,
+        "lost_monthly_revenue": 27462.50000000001
+      },
+      {
+        "segment": "49+ months",
+        "customers": 2239,
+        "churned": 213,
+        "churn_rate": 0.09513175524787852,
+        "avg_tenure": 63.048682447521216,
+        "avg_monthly_charges": 73.94537740062529,
+        "lost_monthly_revenue": 19632.45
+      }
+    ],
+    "monthly_charges": [
+      {
+        "segment": "$70-$94",
+        "customers": 2283,
+        "churned": 852,
+        "churn_rate": 0.3731931668856767,
+        "avg_tenure": 30.43276390713973,
+        "avg_monthly_charges": 82.38105562855884,
+        "lost_monthly_revenue": 69934.90000000002
+      },
+      {
+        "segment": "$95+",
+        "customers": 1308,
+        "churned": 422,
+        "churn_rate": 0.32262996941896027,
+        "avg_tenure": 47.78593272171254,
+        "avg_monthly_charges": 103.81219418960227,
+        "lost_monthly_revenue": 43046.1
+      },
+      {
+        "segment": "$35-$69",
+        "customers": 1721,
+        "churned": 407,
+        "churn_rate": 0.23649041255084252,
+        "avg_tenure": 26.923881464264962,
+        "avg_monthly_charges": 54.72234166182449,
+        "lost_monthly_revenue": 21726.80000000002
+      },
+      {
+        "segment": "Under $35",
+        "customers": 1731,
+        "churned": 188,
+        "churn_rate": 0.10860774119006354,
+        "avg_tenure": 28.695551704217216,
+        "avg_monthly_charges": 21.997198151357612,
+        "lost_monthly_revenue": 4423.049999999999
+      }
+    ],
+    "protection": [
+      {
+        "segment": "No",
+        "customers": 3264,
+        "churned": 1027,
+        "churn_rate": 0.31464460784313725,
+        "avg_tenure": 23.003063725490197,
+        "avg_monthly_charges": 46.92919730392158,
+        "lost_monthly_revenue": 68568.15000000001
+      },
+      {
+        "segment": "Yes",
+        "customers": 3779,
+        "churned": 842,
+        "churn_rate": 0.2228102672664726,
+        "avg_tenure": 40.462556231807355,
+        "avg_monthly_charges": 80.1639851812647,
+        "lost_monthly_revenue": 70562.69999999997
       }
     ]
   },
-  "cohorts": [
+  "retention_curve": [
     {
-      "cohort": "2025-01",
-      "customers": 79,
-      "retention": [
-        1.0,
-        0.9746835443037974,
-        0.9493670886075949,
-        0.9493670886075949,
-        0.9493670886075949,
-        0.9240506329113924,
-        0.9113924050632911,
-        0.8860759493670886,
-        0.8860759493670886,
-        0.8860759493670886,
-        0.8734177215189873,
-        0.8481012658227848,
-        0.8481012658227848
-      ]
+      "month": 1,
+      "observed_customers": 7032,
+      "active_customers": 5163,
+      "active_share_of_total": 0.7330682947607554,
+      "churned_at_or_before": 380
     },
     {
-      "cohort": "2025-02",
-      "customers": 69,
-      "retention": [
-        1.0,
-        1.0,
-        0.9855072463768116,
-        0.9710144927536232,
-        0.9710144927536232,
-        0.927536231884058,
-        0.927536231884058,
-        0.9130434782608695,
-        0.8840579710144928,
-        0.8695652173913043,
-        0.8695652173913043,
-        0.855072463768116,
-        0.855072463768116
-      ]
+      "month": 3,
+      "observed_customers": 6181,
+      "active_customers": 4815,
+      "active_share_of_total": 0.683657532301576,
+      "churned_at_or_before": 597
     },
     {
-      "cohort": "2025-03",
-      "customers": 89,
-      "retention": [
-        1.0,
-        0.9887640449438202,
-        0.9887640449438202,
-        0.9662921348314607,
-        0.9325842696629213,
-        0.9101123595505618,
-        0.9101123595505618,
-        0.9101123595505618,
-        0.898876404494382,
-        0.8876404494382022,
-        0.8876404494382022,
-        0.8651685393258427,
-        0.8651685393258427
-      ]
+      "month": 6,
+      "observed_customers": 5672,
+      "active_customers": 4547,
+      "active_share_of_total": 0.6456055658100242,
+      "churned_at_or_before": 784
     },
     {
-      "cohort": "2025-04",
-      "customers": 75,
-      "retention": [
-        1.0,
-        0.9733333333333334,
-        0.9333333333333333,
-        0.9333333333333333,
-        0.9333333333333333,
-        0.9333333333333333,
-        0.8933333333333333,
-        0.88,
-        0.8533333333333334,
-        0.8533333333333334,
-        0.8533333333333334,
-        0.8533333333333334,
-        0.8533333333333334
-      ]
+      "month": 12,
+      "observed_customers": 4974,
+      "active_customers": 4104,
+      "active_share_of_total": 0.5827062331392873,
+      "churned_at_or_before": 1037
     },
     {
-      "cohort": "2025-05",
-      "customers": 69,
-      "retention": [
-        1.0,
-        0.9855072463768116,
-        0.9565217391304348,
-        0.9565217391304348,
-        0.927536231884058,
-        0.927536231884058,
-        0.9130434782608695,
-        0.9130434782608695,
-        0.8985507246376812,
-        0.8695652173913043,
-        0.8695652173913043,
-        0.8695652173913043,
-        0.8695652173913043
-      ]
+      "month": 24,
+      "observed_customers": 3927,
+      "active_customers": 3366,
+      "active_share_of_total": 0.47792134033792416,
+      "churned_at_or_before": 1331
     },
     {
-      "cohort": "2025-06",
-      "customers": 75,
-      "retention": [
-        1.0,
-        1.0,
-        1.0,
-        0.9733333333333334,
-        0.9733333333333334,
-        0.96,
-        0.92,
-        0.88,
-        0.88,
-        0.88,
-        0.8666666666666667,
-        0.8666666666666667,
-        0.8666666666666667
-      ]
+      "month": 36,
+      "observed_customers": 3051,
+      "active_customers": 2683,
+      "active_share_of_total": 0.38094561976430497,
+      "churned_at_or_before": 1511
     },
     {
-      "cohort": "2025-07",
-      "customers": 104,
-      "retention": [
-        1.0,
-        0.9807692307692307,
-        0.9519230769230769,
-        0.9326923076923077,
-        0.9038461538461539,
-        0.875,
-        0.8461538461538461,
-        0.8269230769230769,
-        0.7980769230769231,
-        0.7884615384615384,
-        0.7884615384615384,
-        0.7788461538461539
-      ]
+      "month": 48,
+      "observed_customers": 2303,
+      "active_customers": 2081,
+      "active_share_of_total": 0.29547068010790856,
+      "churned_at_or_before": 1656
     },
     {
-      "cohort": "2025-08",
-      "customers": 93,
-      "retention": [
-        1.0,
-        0.989247311827957,
-        0.989247311827957,
-        0.978494623655914,
-        0.956989247311828,
-        0.956989247311828,
-        0.956989247311828,
-        0.9354838709677419,
-        0.9247311827956989,
-        0.9247311827956989,
-        0.9247311827956989
-      ]
+      "month": 60,
+      "observed_customers": 1483,
+      "active_customers": 1384,
+      "active_share_of_total": 0.19650717023995457,
+      "churned_at_or_before": 1776
     },
     {
-      "cohort": "2025-09",
-      "customers": 89,
-      "retention": [
-        1.0,
-        0.9887640449438202,
-        0.9775280898876404,
-        0.9325842696629213,
-        0.9101123595505618,
-        0.898876404494382,
-        0.898876404494382,
-        0.8651685393258427,
-        0.8539325842696629,
-        0.8426966292134831
-      ]
-    },
-    {
-      "cohort": "2025-10",
-      "customers": 92,
-      "retention": [
-        1.0,
-        0.967391304347826,
-        0.9347826086956522,
-        0.9130434782608695,
-        0.9021739130434783,
-        0.8695652173913043,
-        0.8478260869565217,
-        0.8478260869565217,
-        0.8478260869565217
-      ]
-    },
-    {
-      "cohort": "2025-11",
-      "customers": 113,
-      "retention": [
-        1.0,
-        0.9734513274336283,
-        0.9469026548672567,
-        0.9203539823008849,
-        0.911504424778761,
-        0.8761061946902655,
-        0.8407079646017699,
-        0.8230088495575221
-      ]
-    },
-    {
-      "cohort": "2025-12",
-      "customers": 92,
-      "retention": [
-        1.0,
-        0.9782608695652174,
-        0.9021739130434783,
-        0.8695652173913043,
-        0.8369565217391305,
-        0.7608695652173914,
-        0.717391304347826
-      ]
-    },
-    {
-      "cohort": "2026-01",
-      "customers": 134,
-      "retention": [
-        1.0,
-        0.9552238805970149,
-        0.8880597014925373,
-        0.8582089552238806,
-        0.7910447761194029,
-        0.7611940298507462
-      ]
-    },
-    {
-      "cohort": "2026-02",
-      "customers": 113,
-      "retention": [
-        1.0,
-        0.9646017699115044,
-        0.8849557522123894,
-        0.8672566371681416,
-        0.8407079646017699
-      ]
-    },
-    {
-      "cohort": "2026-03",
-      "customers": 114,
-      "retention": [
-        1.0,
-        0.9649122807017544,
-        0.8421052631578947,
-        0.7807017543859649
-      ]
+      "month": 72,
+      "observed_customers": 362,
+      "active_customers": 356,
+      "active_share_of_total": 0.05054664205594207,
+      "churned_at_or_before": 1869
     }
   ],
-  "churn_reasons": [
-    {
-      "reason": "Missing integration",
-      "customers": 49
-    },
-    {
-      "reason": "Price sensitivity",
-      "customers": 48
-    },
-    {
-      "reason": "Low product usage",
-      "customers": 44
-    },
-    {
-      "reason": "Poor onboarding",
-      "customers": 39
-    },
-    {
-      "reason": "Switched competitor",
-      "customers": 38
-    },
-    {
-      "reason": "Company downsized",
-      "customers": 19
-    },
-    {
-      "reason": "Payment failure",
-      "customers": 14
-    }
-  ],
-  "tenure_buckets": [
-    {
-      "bucket": "0-1 mo",
-      "customers": 32
-    },
-    {
-      "bucket": "2-3 mo",
-      "customers": 90
-    },
-    {
-      "bucket": "4-6 mo",
-      "customers": 80
-    },
-    {
-      "bucket": "7-12 mo",
-      "customers": 41
-    },
-    {
-      "bucket": "12+ mo",
-      "customers": 8
-    }
-  ]
+  "churn_profile": {
+    "contract": [
+      [
+        "Month-to-month",
+        1655
+      ],
+      [
+        "One year",
+        166
+      ],
+      [
+        "Two year",
+        48
+      ]
+    ],
+    "payment_method": [
+      [
+        "Electronic check",
+        1071
+      ],
+      [
+        "Mailed check",
+        308
+      ],
+      [
+        "Bank transfer (automatic)",
+        258
+      ],
+      [
+        "Credit card (automatic)",
+        232
+      ]
+    ],
+    "internet_service": [
+      [
+        "Fiber optic",
+        1297
+      ],
+      [
+        "DSL",
+        459
+      ],
+      [
+        "No",
+        113
+      ]
+    ]
+  }
 }

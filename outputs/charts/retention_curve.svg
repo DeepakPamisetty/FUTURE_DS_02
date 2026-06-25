@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+<style>text{font-family:Inter,Arial,sans-serif}.title{font-size:30px;font-weight:800;fill:#18211f}.axis{font-size:15px;font-weight:700;fill:#53625d}.line{fill:none;stroke:#168474;stroke-width:5}.dot{fill:#df6c4f;stroke:white;stroke-width:3}.grid{stroke:#ded7ca;stroke-width:1}</style>
+<text x="0" y="34" class="title">Active Customer Retention by Tenure</text>
+<line x1="80" x2="840" y1="350" y2="350" class="grid"/>
+<text x="8" y="355" class="axis">0.0%</text>
+<line x1="80" x2="840" y1="280.0" y2="280.0" class="grid"/>
+<text x="8" y="285.0" class="axis">25.0%</text>
+<line x1="80" x2="840" y1="210.0" y2="210.0" class="grid"/>
+<text x="8" y="215.0" class="axis">50.0%</text>
+<line x1="80" x2="840" y1="140.0" y2="140.0" class="grid"/>
+<text x="8" y="145.0" class="axis">75.0%</text>
+<line x1="80" x2="840" y1="70.0" y2="70.0" class="grid"/>
+<text x="8" y="75.0" class="axis">100.0%</text>
+<polyline points="80.0,144.7 175.0,158.6 270.0,169.2 365.0,186.8 460.0,216.2 555.0,243.3 650.0,267.3 745.0,295.0 840.0,335.8" class="line"/>
+<circle cx="80.0" cy="144.7" r="8" class="dot"/>
+<text x="66.0" y="382" class="axis">1</text>
+<circle cx="175.0" cy="158.6" r="8" class="dot"/>
+<text x="161.0" y="382" class="axis">3</text>
+<circle cx="270.0" cy="169.2" r="8" class="dot"/>
+<text x="256.0" y="382" class="axis">6</text>
+<circle cx="365.0" cy="186.8" r="8" class="dot"/>
+<text x="351.0" y="382" class="axis">12</text>
+<circle cx="460.0" cy="216.2" r="8" class="dot"/>
+<text x="446.0" y="382" class="axis">24</text>
+<circle cx="555.0" cy="243.3" r="8" class="dot"/>
+<text x="541.0" y="382" class="axis">36</text>
+<circle cx="650.0" cy="267.3" r="8" class="dot"/>
+<text x="636.0" y="382" class="axis">48</text>
+<circle cx="745.0" cy="295.0" r="8" class="dot"/>
+<text x="731.0" y="382" class="axis">60</text>
+<circle cx="840.0" cy="335.8" r="8" class="dot"/>
+<text x="826.0" y="382" class="axis">72</text>
+<text x="390" y="414" class="axis">Tenure month</text>
+</svg>

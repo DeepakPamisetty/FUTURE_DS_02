@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+<style>text{font-family:Inter,Arial,sans-serif}.title{font-size:30px;font-weight:800;fill:#18211f}.label{font-size:18px;font-weight:700;fill:#53625d}.value{font-size:18px;font-weight:800;fill:#18211f}.track{fill:#ece6dc}.bar{fill:#c89b35}</style>
+<text x="0" y="34" class="title">Churn Rate by Tenure</text>
+<text x="0" y="97" class="label">0-6 months</text>
+<rect x="230" y="72" width="540" height="30" rx="5" class="track"/>
+<rect x="230" y="72" width="540.0" height="30" rx="5" class="bar"/>
+<text x="782.0" y="95" class="value">52.9%</text>
+<text x="0" y="145" class="label">7-12 months</text>
+<rect x="230" y="120" width="540" height="30" rx="5" class="track"/>
+<rect x="230" y="120" width="366.1" height="30" rx="5" class="bar"/>
+<text x="608.1" y="143" class="value">35.9%</text>
+<text x="0" y="193" class="label">13-24 months</text>
+<rect x="230" y="168" width="540" height="30" rx="5" class="track"/>
+<rect x="230" y="168" width="292.9" height="30" rx="5" class="bar"/>
+<text x="534.9" y="191" class="value">28.7%</text>
+<text x="0" y="241" class="label">25-48 months</text>
+<rect x="230" y="216" width="540" height="30" rx="5" class="track"/>
+<rect x="230" y="216" width="208.0" height="30" rx="5" class="bar"/>
+<text x="450.0" y="239" class="value">20.4%</text>
+<text x="0" y="289" class="label">49+ months</text>
+<rect x="230" y="264" width="540" height="30" rx="5" class="track"/>
+<rect x="230" y="264" width="97.0" height="30" rx="5" class="bar"/>
+<text x="339.0" y="287" class="value">9.5%</text>
+</svg>

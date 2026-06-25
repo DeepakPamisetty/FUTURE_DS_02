@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+<style>text{font-family:Inter,Arial,sans-serif}.title{font-size:30px;font-weight:800;fill:#18211f}.label{font-size:18px;font-weight:700;fill:#53625d}.value{font-size:18px;font-weight:800;fill:#18211f}.track{fill:#ece6dc}.bar{fill:#168474}</style>
+<text x="0" y="34" class="title">Churn Rate by Internet Service</text>
+<text x="0" y="97" class="label">Fiber optic</text>
+<rect x="230" y="72" width="540" height="30" rx="5" class="track"/>
+<rect x="230" y="72" width="540.0" height="30" rx="5" class="bar"/>
+<text x="782.0" y="95" class="value">41.9%</text>
+<text x="0" y="145" class="label">DSL</text>
+<rect x="230" y="120" width="540" height="30" rx="5" class="track"/>
+<rect x="230" y="120" width="244.4" height="30" rx="5" class="bar"/>
+<text x="486.4" y="143" class="value">19.0%</text>
+<text x="0" y="193" class="label">No</text>
+<rect x="230" y="168" width="540" height="30" rx="5" class="track"/>
+<rect x="230" y="168" width="95.5" height="30" rx="5" class="bar"/>
+<text x="337.5" y="191" class="value">7.4%</text>
+</svg>
