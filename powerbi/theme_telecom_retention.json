@@ -1,0 +1,72 @@
+{
+  "name": "FUTURE_DS_02 Telecom Retention",
+  "dataColors": [
+    "#168474",
+    "#df6c4f",
+    "#c89b35",
+    "#53625d",
+    "#8aa39b",
+    "#f0b184",
+    "#6b7d78",
+    "#24302d"
+  ],
+  "background": "#f7f4ee",
+  "foreground": "#18211f",
+  "tableAccent": "#168474",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [
+          {
+            "fontFamily": "Segoe UI"
+          }
+        ],
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#fffdf8"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#ded7ca"
+              }
+            },
+            "radius": 8
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#18211f"
+              }
+            },
+            "fontSize": 24
+          }
+        ],
+        "categoryLabels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#5f6c68"
+              }
+            },
+            "fontSize": 10
+          }
+        ]
+      }
+    }
+  }
+}

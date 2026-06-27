@@ -1,0 +1,79 @@
+-- FUTURE_DS_02 Power BI measures
+-- Table name expected in Power BI: TelcoChurn
+
+Customers = COUNTROWS(TelcoChurn)
+
+Active Customers =
+CALCULATE(
+    [Customers],
+    TelcoChurn[Churn] = "No"
+)
+
+Churned Customers =
+CALCULATE(
+    [Customers],
+    TelcoChurn[Churn] = "Yes"
+)
+
+Logo Churn Rate =
+DIVIDE(
+    [Churned Customers],
+    [Customers]
+)
+
+Monthly Revenue =
+SUM(TelcoChurn[MonthlyCharges])
+
+Lost Monthly Revenue =
+CALCULATE(
+    [Monthly Revenue],
+    TelcoChurn[Churn] = "Yes"
+)
+
+Revenue Churn Rate =
+DIVIDE(
+    [Lost Monthly Revenue],
+    [Monthly Revenue]
+)
+
+Average Tenure =
+AVERAGE(TelcoChurn[tenure])
+
+Average Monthly Charge =
+AVERAGE(TelcoChurn[MonthlyCharges])
+
+Average Total Charges =
+AVERAGE(TelcoChurn[TotalCharges])
+
+Month To Month Churn Rate =
+CALCULATE(
+    [Logo Churn Rate],
+    TelcoChurn[Contract] = "Month-to-month"
+)
+
+Two Year Churn Rate =
+CALCULATE(
+    [Logo Churn Rate],
+    TelcoChurn[Contract] = "Two year"
+)
+
+Contract Risk Gap =
+[Month To Month Churn Rate] - [Two Year Churn Rate]
+
+Customers With Protection =
+CALCULATE(
+    [Customers],
+    TelcoChurn[HasProtection] = "Yes"
+)
+
+Protection Adoption Rate =
+DIVIDE(
+    [Customers With Protection],
+    [Customers]
+)
+
+Churned Revenue Per Customer =
+DIVIDE(
+    [Lost Monthly Revenue],
+    [Churned Customers]
+)

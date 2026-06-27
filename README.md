@@ -11,8 +11,21 @@ The Kaggle page and API endpoint for the requested slug returned 404 during rebu
 - View dashboard: https://htmlpreview.github.io/?https://github.com/DeepakPamisetty/FUTURE_DS_02/blob/master/outputs/telecom_churn_dashboard.html
 - Dashboard file in repository: https://github.com/DeepakPamisetty/FUTURE_DS_02/blob/master/outputs/telecom_churn_dashboard.html
 - GitHub Pages URL, after Pages is enabled: https://deepakpamisetty.github.io/FUTURE_DS_02/
+- Power BI build guide: https://github.com/DeepakPamisetty/FUTURE_DS_02/blob/master/powerbi/report_layout.md
+- Power BI DAX measures: https://github.com/DeepakPamisetty/FUTURE_DS_02/blob/master/powerbi/measures.dax
 
 The GitHub Pages URL returns 404 until Pages is enabled for this repository from **Settings > Pages**, using the `master` branch and `/root` folder.
+
+## Power BI Version
+
+Power BI Desktop is not available in this Mac workspace, so a `.pbix` binary could not be generated directly here. The repository includes a Power BI-ready build pack:
+
+- `powerbi/report_layout.md` - exact dashboard layout for Power BI.
+- `powerbi/measures.dax` - DAX measures for churn, retention, and revenue risk.
+- `powerbi/power_query_transform.m` - Power Query transformations and data types.
+- `powerbi/theme_telecom_retention.json` - Power BI theme matching the dashboard style.
+
+To build the Power BI report, open Power BI Desktop, import `data/processed/telco_churn_cleaned.csv`, rename the table to `TelcoChurn`, paste the DAX measures, apply the theme, and recreate the visuals using `powerbi/report_layout.md`.
 
 ## Outputs
 
@@ -76,6 +89,11 @@ FUTURE_DS_02/
 │   │   ├── retention_curve.svg
 │   │   └── tenure_churn.svg
 │   └── telecom_churn_dashboard.html
+├── powerbi/
+│   ├── measures.dax
+│   ├── power_query_transform.m
+│   ├── report_layout.md
+│   └── theme_telecom_retention.json
 ├── scripts/
 │   └── build_telecom_churn_report.py
 ├── index.html
