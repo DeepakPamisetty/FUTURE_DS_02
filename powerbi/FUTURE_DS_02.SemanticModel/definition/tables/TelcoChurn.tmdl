@@ -1,0 +1,214 @@
+table TelcoChurn
+    lineageTag: 2f3f0d2d-0e32-4f1a-a5bd-6f0b21930202
+
+    column customerID
+        dataType: string
+        sourceColumn: customerID
+
+    column gender
+        dataType: string
+        sourceColumn: gender
+
+    column SeniorCitizen
+        dataType: string
+        sourceColumn: SeniorCitizen
+
+    column Partner
+        dataType: string
+        sourceColumn: Partner
+
+    column Dependents
+        dataType: string
+        sourceColumn: Dependents
+
+    column tenure
+        dataType: int64
+        sourceColumn: tenure
+        summarizeBy: sum
+
+    column PhoneService
+        dataType: string
+        sourceColumn: PhoneService
+
+    column MultipleLines
+        dataType: string
+        sourceColumn: MultipleLines
+
+    column InternetService
+        dataType: string
+        sourceColumn: InternetService
+
+    column OnlineSecurity
+        dataType: string
+        sourceColumn: OnlineSecurity
+
+    column OnlineBackup
+        dataType: string
+        sourceColumn: OnlineBackup
+
+    column DeviceProtection
+        dataType: string
+        sourceColumn: DeviceProtection
+
+    column TechSupport
+        dataType: string
+        sourceColumn: TechSupport
+
+    column StreamingTV
+        dataType: string
+        sourceColumn: StreamingTV
+
+    column StreamingMovies
+        dataType: string
+        sourceColumn: StreamingMovies
+
+    column Contract
+        dataType: string
+        sourceColumn: Contract
+
+    column PaperlessBilling
+        dataType: string
+        sourceColumn: PaperlessBilling
+
+    column PaymentMethod
+        dataType: string
+        sourceColumn: PaymentMethod
+
+    column MonthlyCharges
+        dataType: decimal
+        sourceColumn: MonthlyCharges
+        formatString: $#,0.00;-$#,0.00;$#,0.00
+        summarizeBy: sum
+
+    column TotalCharges
+        dataType: decimal
+        sourceColumn: TotalCharges
+        formatString: $#,0.00;-$#,0.00;$#,0.00
+        summarizeBy: sum
+
+    column Churn
+        dataType: string
+        sourceColumn: Churn
+
+    column ChurnFlag
+        dataType: int64
+        sourceColumn: ChurnFlag
+        summarizeBy: sum
+
+    column TenureBucket
+        dataType: string
+        sourceColumn: TenureBucket
+
+    column MonthlyChargeBucket
+        dataType: string
+        sourceColumn: MonthlyChargeBucket
+
+    column HasProtection
+        dataType: string
+        sourceColumn: HasProtection
+
+    measure Customers = COUNTROWS(TelcoChurn)
+        formatString: #,0
+
+    measure 'Active Customers' =
+            CALCULATE(
+                [Customers],
+                TelcoChurn[Churn] = "No"
+            )
+        formatString: #,0
+
+    measure 'Churned Customers' =
+            CALCULATE(
+                [Customers],
+                TelcoChurn[Churn] = "Yes"
+            )
+        formatString: #,0
+
+    measure 'Logo Churn Rate' =
+            DIVIDE(
+                [Churned Customers],
+                [Customers]
+            )
+        formatString: 0.0%
+
+    measure 'Monthly Revenue' = SUM(TelcoChurn[MonthlyCharges])
+        formatString: $#,0;-$#,0;$#,0
+
+    measure 'Lost Monthly Revenue' =
+            CALCULATE(
+                [Monthly Revenue],
+                TelcoChurn[Churn] = "Yes"
+            )
+        formatString: $#,0;-$#,0;$#,0
+
+    measure 'Revenue Churn Rate' =
+            DIVIDE(
+                [Lost Monthly Revenue],
+                [Monthly Revenue]
+            )
+        formatString: 0.0%
+
+    measure 'Average Tenure' = AVERAGE(TelcoChurn[tenure])
+        formatString: 0.0
+
+    measure 'Average Monthly Charge' = AVERAGE(TelcoChurn[MonthlyCharges])
+        formatString: $#,0.00;-$#,0.00;$#,0.00
+
+    measure 'Month To Month Churn Rate' =
+            CALCULATE(
+                [Logo Churn Rate],
+                TelcoChurn[Contract] = "Month-to-month"
+            )
+        formatString: 0.0%
+
+    measure 'Two Year Churn Rate' =
+            CALCULATE(
+                [Logo Churn Rate],
+                TelcoChurn[Contract] = "Two year"
+            )
+        formatString: 0.0%
+
+    measure 'Contract Risk Gap' = [Month To Month Churn Rate] - [Two Year Churn Rate]
+        formatString: 0.0%
+
+    partition TelcoChurn = m
+        mode: import
+        source =
+                let
+                    Source = Csv.Document(
+                        File.Contents("data/processed/telco_churn_cleaned.csv"),
+                        [Delimiter = ",", Columns = 25, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+                    ),
+                    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+                    ChangedTypes = Table.TransformColumnTypes(
+                        PromotedHeaders,
+                        {
+                            {"customerID", type text},
+                            {"gender", type text},
+                            {"SeniorCitizen", type text},
+                            {"Partner", type text},
+                            {"Dependents", type text},
+                            {"tenure", Int64.Type},
+                            {"PhoneService", type text},
+                            {"MultipleLines", type text},
+                            {"InternetService", type text},
+                            {"OnlineSecurity", type text},
+                            {"OnlineBackup", type text},
+                            {"DeviceProtection", type text},
+                            {"TechSupport", type text},
+                            {"StreamingTV", type text},
+                            {"StreamingMovies", type text},
+                            {"Contract", type text},
+                            {"PaperlessBilling", type text},
+                            {"PaymentMethod", type text},
+                            {"MonthlyCharges", Currency.Type},
+                            {"TotalCharges", Currency.Type},
+                            {"Churn", type text},
+                            {"ChurnFlag", Int64.Type},
+                            {"TenureBucket", type text},
+                            {"MonthlyChargeBucket", type text},
+                            {"HasProtection", type text}
+                        }
+                    )
+                in
+                    ChangedTypes

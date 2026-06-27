@@ -12,20 +12,24 @@ The Kaggle page and API endpoint for the requested slug returned 404 during rebu
 - Dashboard file in repository: https://github.com/DeepakPamisetty/FUTURE_DS_02/blob/master/outputs/telecom_churn_dashboard.html
 - GitHub Pages URL, after Pages is enabled: https://deepakpamisetty.github.io/FUTURE_DS_02/
 - Power BI build guide: https://github.com/DeepakPamisetty/FUTURE_DS_02/blob/master/powerbi/report_layout.md
+- Power BI Project file: https://github.com/DeepakPamisetty/FUTURE_DS_02/blob/master/powerbi/FUTURE_DS_02.pbip
 - Power BI DAX measures: https://github.com/DeepakPamisetty/FUTURE_DS_02/blob/master/powerbi/measures.dax
 
 The GitHub Pages URL returns 404 until Pages is enabled for this repository from **Settings > Pages**, using the `master` branch and `/root` folder.
 
 ## Power BI Version
 
-Power BI Desktop is not available in this Mac workspace, so a `.pbix` binary could not be generated directly here. The repository includes a Power BI-ready build pack:
+Power BI Desktop is not available in this Mac workspace, so a `.pbix` binary could not be generated directly here. The repository includes a Power BI Project scaffold and build pack:
 
+- `powerbi/FUTURE_DS_02.pbip` - Power BI Project entry file.
+- `powerbi/FUTURE_DS_02.SemanticModel/` - semantic model source with the `TelcoChurn` table and core measures.
+- `powerbi/FUTURE_DS_02.Report/` - report project folder connected to the semantic model.
 - `powerbi/report_layout.md` - exact dashboard layout for Power BI.
 - `powerbi/measures.dax` - DAX measures for churn, retention, and revenue risk.
 - `powerbi/power_query_transform.m` - Power Query transformations and data types.
 - `powerbi/theme_telecom_retention.json` - Power BI theme matching the dashboard style.
 
-To build the Power BI report, open Power BI Desktop, import `data/processed/telco_churn_cleaned.csv`, rename the table to `TelcoChurn`, paste the DAX measures, apply the theme, and recreate the visuals using `powerbi/report_layout.md`.
+To build the Power BI report, open `powerbi/FUTURE_DS_02.pbip` in Power BI Desktop, refresh the `TelcoChurn` table, apply the theme, and recreate or refine the visuals using `powerbi/report_layout.md`. Then save as `.pbix`.
 
 ## Outputs
 
@@ -90,6 +94,15 @@ FUTURE_DS_02/
 │   │   └── tenure_churn.svg
 │   └── telecom_churn_dashboard.html
 ├── powerbi/
+│   ├── FUTURE_DS_02.pbip
+│   ├── FUTURE_DS_02.Report/
+│   │   └── definition.pbir
+│   ├── FUTURE_DS_02.SemanticModel/
+│   │   ├── definition.pbism
+│   │   └── definition/
+│   │       ├── model.tmdl
+│   │       └── tables/
+│   │           └── TelcoChurn.tmdl
 │   ├── measures.dax
 │   ├── power_query_transform.m
 │   ├── report_layout.md

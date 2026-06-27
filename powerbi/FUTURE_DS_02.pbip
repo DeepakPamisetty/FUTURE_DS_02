@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "artifacts": [
+    {
+      "semanticModel": {
+        "path": "FUTURE_DS_02.SemanticModel"
+      }
+    },
+    {
+      "report": {
+        "path": "FUTURE_DS_02.Report"
+      }
+    }
+  ],
+  "settings": {
+    "enableAutoRecovery": true
+  }
+}
